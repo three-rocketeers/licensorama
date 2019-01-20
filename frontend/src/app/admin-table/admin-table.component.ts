@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../admin.service';
+import { License } from '../license';
 
 @Component({
   selector: 'app-admin-table',
@@ -8,12 +9,16 @@ import { AdminService } from '../admin.service';
 })
 export class AdminTableComponent implements OnInit {
 
-  licenses: Number[];
+  licenses: License[];
 
   constructor(private adminService: AdminService) { }
 
   ngOnInit() {
-    this.licenses = this.adminService.getLicenses();
+    this.getLicenses();
+  }
+
+  getLicenses(): void {
+    this.adminService.getLicenses().subscribe(licenses => this.licenses = licenses);
   }
 
 }

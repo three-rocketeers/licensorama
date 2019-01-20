@@ -1,6 +1,9 @@
-from app import app,models
+from app import app
+from app.models import License
+from flask import jsonify
 
 
-@app.route('/')
+@app.route('/api/licenses')
 def get_license():
-    return models.License.query.get(1).licensekey
+    licenses = License.query.all()
+    return jsonify([lic.serialize() for lic in licenses])

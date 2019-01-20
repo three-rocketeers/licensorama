@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-import { LICENSE_DATA } from './mockdata';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { License } from './license';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getLicenses(): Number[] {
-    return LICENSE_DATA;
+  getLicenses(): Observable<License[]> {
+    return this.http.get<License[]>('http://localhost:5000/api/licenses');
   };
 }

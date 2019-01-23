@@ -1,0 +1,21 @@
+#license-table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#license-table td, #license-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#license-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#license-table tr:hover {background-color: #ddd;}
+
+#license-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #990033;
+  color: white
+}

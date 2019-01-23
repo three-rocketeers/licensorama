@@ -16,3 +16,11 @@ class License(db.Model):
 
     def __repr__(self):
         return '<License {}>'.format(self.licensekey)
+
+    def serialize(self):
+        """Return object data in easily serializable format"""
+        return {
+            'id': self.id,
+            'licenseKey': self.licensekey,
+            'product': self.product
+        }

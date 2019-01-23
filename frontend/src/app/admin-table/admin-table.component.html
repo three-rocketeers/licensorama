@@ -1,0 +1,14 @@
+<h2>Admin Control Panel</h2>
+
+<table id="license-table">
+  <tr>
+    <th>License-id</th>
+    <th>Password</th>
+    <th>Product-id</th>
+  </tr>
+  <tr *ngFor="let license of licenses">
+    <td>{{license.id}}</td>
+    <td>{{license.licenseKey}}</td>
+    <td>{{license.product}}</td>
+  </tr>
+</table>

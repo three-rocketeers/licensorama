@@ -1,0 +1,13 @@
+distro: xenial
+
+language: python
+
+python: "3.6"
+
+before_install: cd backend 
+
+install: pip install -r requirements.txt
+
+branches:
+  only:
+  - deployment-test 

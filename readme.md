@@ -1,5 +1,4 @@
-# Product Name
-> Short blurb about what your product does.
+# Licensorama
 
 [![Build Status](https://travis-ci.org/three-rocketeers/licensorama.svg?branch=master)](https://travis-ci.org/three-rocketeers/licensorama)
 

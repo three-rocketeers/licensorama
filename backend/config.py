@@ -2,11 +2,13 @@ import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-if param == 1:
+b = 2
+
+if b == 1:
     a = 1
-elif param == 2:
+elif b == 2:
     a = 2
-elif param == 1:            # Noncompliant
+elif b == 1:            # Noncompliant
     a = 3
 
 class Config(object):

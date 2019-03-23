@@ -2,3 +2,5 @@ flask-sqlalchemy
 flask-migrate
 flask-cors
 pytest
+gunicorn
+psycopg2

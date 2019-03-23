@@ -4,6 +4,8 @@
 
 One to two paragraph statement about your product and what it does.
 
+A live preview of the master branch can be found at https://licensorama-daily-build.herokuapp.com/.
+
 ## Installation
 Prerequisites:
 * npm
@@ -30,6 +32,7 @@ Start the local backend server by running
 ```sh
 bash bootstrap.sh
 ```
+from the backend directory.
 
 ## Usage example
 

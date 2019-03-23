@@ -22,6 +22,7 @@ from the frontend directory.
 Backend installation (has to be done inside folder backend):
 ```sh
 python3 -m venv venv
+source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 

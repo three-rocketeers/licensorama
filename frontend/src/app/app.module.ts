@@ -3,18 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AdminTableComponent } from './admin-table/admin-table.component';
-import { AdminTableRowComponent } from './admin-table-row/admin-table-row.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminTableComponent,
-    AdminTableRowComponent
+    AdminTableComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

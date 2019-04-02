@@ -4,21 +4,35 @@
 
 One to two paragraph statement about your product and what it does.
 
-![](header.png)
+A live preview of the master branch can be found at https://licensorama-daily-build.herokuapp.com/.
 
 ## Installation
+Prerequisites:
+* npm
+* python3
 
-OS X & Linux:
-
+Frontend installation (has to be done inside folder frontend):
 ```sh
-npm install my-crazy-module --save
+npm install package.json
+```
+Start the local frontend server by running 
+```sh
+ng serve --open
+```
+from the frontend directory.
+
+Backend installation (has to be done inside folder backend):
+```sh
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
 ```
 
-Windows:
-
+Start the local backend server by running
 ```sh
-edit autoexec.bat
+bash bootstrap.sh
 ```
+from the backend directory.
 
 ## Usage example
 

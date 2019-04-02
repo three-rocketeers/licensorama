@@ -1,17 +1,23 @@
-distro: trusty 
-
+distro: trusty
 language: python
-
-python: "3.6"
-
-install: 
-  - pip install -r backend/requirements.txt
-  - npm install typescript
-
-script: 
-  - pytest
-  - sonar-scanner
-
-addons: 
+python: '3.6'
+install:
+- pip install -r backend/requirements.txt
+- npm install typescript
+script:
+- pytest
+- sonar-scanner
+deploy:
+  - provider: heroku
+    app: licensorama-backend
+    on: master
+    api_key:
+      secure: lbDg/XR/U3yrjcyUjfeJIMdDCCrnE/SF+KBowb0BbDvhXmSE9sdSJFqEPxFY31eM8lrcUV9iUpAYGq0S5574hc7eV9qzg2E62AqiaT+kRye++rlQknn3bIapQ1SsRoHYJFxjBgfWQ0DqhrWAi5DJMTtw88RgZJaWXgfIIxoBiN1Wir9br2ztVGsLQ9ko6LVAsClYYFJds4ANlowz+3sIqO7UD8grTqe5f9md1OuldHn2ZqDeEM092c67DHHzIiFxfhTBbs6LY18rlEwC+lMpfp7ofOMMXGn/u9si+qhz+rDfGPZIIQ5BhOrOqLFkCYPq2OYjcPEeIuJG9BSjBk4VE1GU4dp0NgAmbRB+Xrvx/jTbLzSketDzu+ZUT2QceRIQ4eL3T5PNgpu4bQHkT2DX0FkXo1p1YHv2vBqbtd+hKp+2Bm9ELpdXdYO1BPAF3GhdydEYT185f4MLFIDNVGaAS51SXEB8+3FR8CMrg+JePyEEXm6/dUT7jqigmGmBbvini0u0RD0PBSbzIZMH3iJ2UvKFm5t5A5qS0xwCzziR8QWqFHcQ5ZzGPeXGkNhRxLUsI+vDlNPnCJsWoos43D8CYASXdaOKfux1IYGvFnPSE1fiJusRo+jsqQLC0kq7KWUYWHuZCqTQjPkWrEIQZGmtL5YCdg+a+liDEJ8h4Jbgm3g=
+  - provider: heroku
+    app: licensorama-daily-build
+    on: master
+    api_key:
+      secure: lbDg/XR/U3yrjcyUjfeJIMdDCCrnE/SF+KBowb0BbDvhXmSE9sdSJFqEPxFY31eM8lrcUV9iUpAYGq0S5574hc7eV9qzg2E62AqiaT+kRye++rlQknn3bIapQ1SsRoHYJFxjBgfWQ0DqhrWAi5DJMTtw88RgZJaWXgfIIxoBiN1Wir9br2ztVGsLQ9ko6LVAsClYYFJds4ANlowz+3sIqO7UD8grTqe5f9md1OuldHn2ZqDeEM092c67DHHzIiFxfhTBbs6LY18rlEwC+lMpfp7ofOMMXGn/u9si+qhz+rDfGPZIIQ5BhOrOqLFkCYPq2OYjcPEeIuJG9BSjBk4VE1GU4dp0NgAmbRB+Xrvx/jTbLzSketDzu+ZUT2QceRIQ4eL3T5PNgpu4bQHkT2DX0FkXo1p1YHv2vBqbtd+hKp+2Bm9ELpdXdYO1BPAF3GhdydEYT185f4MLFIDNVGaAS51SXEB8+3FR8CMrg+JePyEEXm6/dUT7jqigmGmBbvini0u0RD0PBSbzIZMH3iJ2UvKFm5t5A5qS0xwCzziR8QWqFHcQ5ZzGPeXGkNhRxLUsI+vDlNPnCJsWoos43D8CYASXdaOKfux1IYGvFnPSE1fiJusRo+jsqQLC0kq7KWUYWHuZCqTQjPkWrEIQZGmtL5YCdg+a+liDEJ8h4Jbgm3g=
+addons:
   sonarcloud:
-    organization: "three-rocketeers"
+    organization: three-rocketeers

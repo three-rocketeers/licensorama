@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatButtonModule} from '@angular/material';
+import { MatCardModule, MatButtonModule, MatGridListModule} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { AdminTableComponent } from './admin-table/admin-table.component';
@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+    MatGridListModule,
     FlexLayoutModule
   ],
   providers: [],

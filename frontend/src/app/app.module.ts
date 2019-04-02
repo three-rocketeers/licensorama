@@ -6,13 +6,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { AdminTableComponent } from './admin-table/admin-table.component';
 import { AdminTableRowComponent } from './admin-table-row/admin-table-row.component';
+import { CatalogCardComponent } from './catalog-card/catalog-card.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminTableComponent,
-    AdminTableRowComponent
+    AdminTableRowComponent,
+    CatalogCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,14 @@
-<div style="text-align:center">
-  <h1>
-    Welcome to the {{title}} Catalog!
-  </h1>
-</div>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Licensorama</span>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink='/'>MyLicensorama</button>
+            <button mat-menu-item routerLink='/admin-control-panel'>Admin control panel</button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-
-<mat-grid-list cols="3" rowHeight="700px">
-  <mat-grid-tile
-      *ngFor="let number of [0,1,2,3,4]"
-      [colspan]="1"
-      [rowspan]="1">
-    <app-catalog-card></app-catalog-card>
-  </mat-grid-tile>
-</mat-grid-list>
+<router-outlet></router-outlet>

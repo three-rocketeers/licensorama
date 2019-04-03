@@ -1,29 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatButtonModule, MatGridListModule} from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { AppComponent } from './app.component';
 import { AdminTableComponent } from './admin-table/admin-table.component';
-import { AdminTableRowComponent } from './admin-table-row/admin-table-row.component';
-import { CatalogCardComponent } from './catalog-card/catalog-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminTableComponent,
-    AdminTableRowComponent,
-    CatalogCardComponent
+    AdminTableComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatCardModule,
+    MatTableModule,
+    MatMenuModule,
     MatButtonModule,
-    MatGridListModule,
-    FlexLayoutModule
+    MatToolbarModule,
+    MatIconModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

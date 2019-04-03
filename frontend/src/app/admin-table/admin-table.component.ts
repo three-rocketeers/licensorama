@@ -10,6 +10,7 @@ import { License } from '../license';
 export class AdminTableComponent implements OnInit {
 
   licenses: License[];
+  displayedColumns: string[] = ['licenseId', 'password', 'productId'];
 
   constructor(private adminService: AdminService) { }
 

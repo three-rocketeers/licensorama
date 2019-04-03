@@ -1,14 +1,25 @@
-<h2>Admin Control Panel</h2>
+<h3>Admin Control Panel</h3>
 
-<table id="license-table">
-  <tr>
-    <th>License-id</th>
-    <th>Password</th>
-    <th>Product-id</th>
-  </tr>
-  <tr *ngFor="let license of licenses">
-    <td>{{license.id}}</td>
-    <td>{{license.licenseKey}}</td>
-    <td>{{license.product}}</td>
-  </tr>
+<table mat-table [dataSource]="licenses">
+  <!-- License column -->
+  <ng-container matColumnDef="licenseId">
+    <th mat-header-cell *matHeaderCellDef> License-id </th>
+    <td mat-cell *matCellDef="let license"> {{license.id}} </td>
+  </ng-container>
+
+  <!-- Password column -->
+  <ng-container matColumnDef="password">
+    <th mat-header-cell *matHeaderCellDef> Password </th>
+    <td mat-cell *matCellDef="let license"> {{license.licenseKey}} </td>
+  </ng-container>
+
+  <!-- Product column -->
+  <ng-container matColumnDef="productId">
+    <th mat-header-cell *matHeaderCellDef> Product-id </th>
+    <td mat-cell *matCellDef="let license"> {{license.product}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+

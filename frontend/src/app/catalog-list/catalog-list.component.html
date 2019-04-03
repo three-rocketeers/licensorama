@@ -1,0 +1,8 @@
+<mat-grid-list cols="3" rowHeight="700px">
+  <mat-grid-tile
+      *ngFor="let number of [0,1,2,3,4]"
+      [colspan]="1"
+      [rowspan]="1">
+    <app-catalog-card></app-catalog-card>
+  </mat-grid-tile>
+</mat-grid-list>

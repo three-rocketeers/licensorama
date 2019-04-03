@@ -10,12 +10,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule, MatGridListModule} from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
+import {CatalogCardComponent} from "./catalog-card/catalog-card.component";
+import {CatalogListComponent} from "./catalog-list/catalog-list.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminTableComponent
+    AdminTableComponent,
+    CatalogCardComponent,
+    CatalogListComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +31,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatGridListModule,
+    MatCardModule,
     AppRoutingModule
   ],
   providers: [],

@@ -1,14 +1,15 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <span>Licensorama</span>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink='/'>MyLicensorama</button>
-            <button mat-menu-item routerLink='/admin-control-panel'>Admin control panel</button>
-        </mat-menu>
-    </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span>{{title}}</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink='/'>MyLicensorama</button>
+      <button mat-menu-item routerLink="/catalog">Catalog</button>
+      <button mat-menu-item routerLink='/admin-control-panel'>Admin control panel</button>
+    </mat-menu>
+  </mat-toolbar-row>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

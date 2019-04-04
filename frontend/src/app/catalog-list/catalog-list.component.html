@@ -1,6 +1,11 @@
-<mat-grid-list cols="3" rowHeight="700px">
+<mat-form-field class="search-form">
+  <input matInput placeholder="Search Catalog" type="text">
+</mat-form-field>
+<button button="submit" mat-raised-button color="primary">Search</button>
+<br>
+<mat-grid-list cols="5" rowHeight="600px">
   <mat-grid-tile
-      *ngFor="let number of [0,1,2,3,4]"
+      *ngFor="let number of [0,1,2,3,4,5,6,7,8,9,10]"
       [colspan]="1"
       [rowspan]="1">
     <app-catalog-card></app-catalog-card>

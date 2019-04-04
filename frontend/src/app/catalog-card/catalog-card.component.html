@@ -1,15 +1,13 @@
-<mat-card class="example-card mat-elevation-z2">
+<mat-card class="mat-elevation-z2 card-margin">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Intelli-J</mat-card-title>
-    <mat-card-subtitle>Programming</mat-card-subtitle>
+    <img mat-card-avatar src="{{avatar_img}}">
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle>{{type}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="assets/images/intellij.png" alt="Intellij Boxshot">
+  <img mat-card-image src="{{box_img}}" alt="{{box_alt}}">
   <mat-card-content>
     <p>
-      Every aspect of IntelliJ IDEA is specifically designed to maximize developer productivity.
-      Together, the powerful static code analysis and ergonomic design make development not only productive but also
-      an enjoyable experience.
+      {{description}}
     </p>
   </mat-card-content>
   <mat-card-actions>

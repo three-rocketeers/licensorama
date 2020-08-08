@@ -1,6 +1,7 @@
 # Licensorama
 
 [![Build Status](https://travis-ci.org/three-rocketeers/licensorama.svg?branch=master)](https://travis-ci.org/three-rocketeers/licensorama)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=three-rocketeers_licensorama&metric=alert_status)](https://sonarcloud.io/dashboard?id=three-rocketeers_licensorama)
 
 One to two paragraph statement about your product and what it does.
 

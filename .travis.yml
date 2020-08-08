@@ -1,6 +1,7 @@
 distro: trusty
 language: python
 python: '3.6'
+jdk: oraclejdk11
 install:
 - pip install -r backend/requirements.txt
 - npm install typescript

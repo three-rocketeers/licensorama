@@ -27,12 +27,14 @@ python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
 ```
-
+The last command might fail if your Python installation is missing packages.
+ 
 Start the local backend server by running
 ```sh
 bash bootstrap.sh
 ```
 from the backend directory.
+TODO: Describe how the database is configured.
 
 ## Usage example
 
